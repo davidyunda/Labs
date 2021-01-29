@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Create Registration Form</h1>
+
+    <br> Registrant's name: <input type="text" maxlength="70" required>
+    <br> Password: <input type="password" required>
+    <br> Enter your email: <input type="email">
+    
+    <br> T-shirt size choose one: 
+    <select>
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+    </select>
+
+    <br> What's your birth date? <input type="date">
+
+
+    <p> Do you want to recieve emails about our conference sponsors?
+    </p>
+
+    <div class="receive-email">
+        <input id="emails" name="user-choice" class= "receive-email-input"type= "radio" checked="true">
+        <label for="emails" class="receive-email-label">Yes</label>
+    </div>
+    <div class="form-check">
+        <input id= "no-emails" name="user-choice" class="receive-email-input" type= "radio"> 
+        <label for="no-emails" class="receive-email-label">No</label>
+    </div>
+
+   <br> Please choose if attending morning and/or afternoon sessions 
+    <br> morning <input type="checkbox">
+    <br> afternoon <input type="checkbox">
+
+    <br> Special requests:
+    <br> <textarea name="" id="" cols="70" rows="7"></textarea>
+
+    <br> <input type="submit">
+
+
+</body>
+
+
+</html>

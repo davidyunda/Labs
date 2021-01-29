@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CountDown (Python)</h1>
+
+    <p>This program is using python to countdown in seconds, approximately 1 minute but it can 
+        be change to any time and at the end it will play an alarm  </p>
+    
+    <pre>
+        import time, subprocess
+
+        timeLeft = 60
+        while timeLeft > 0:
+            print(timeLeft, end='')
+            time.sleep(1)
+            timeLeft = timeLeft - 1
+
+        subprocess.Popen(['start','alarm.wav'], shell=True)
+    </pre>
+
+    <img src="Cpy.PNG" alt="Countdown"
+    height=500>
+
+</body>
+
+
+</html>
