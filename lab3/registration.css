@@ -1,0 +1,9 @@
+h1 {
+    color:brown
+}
+body {
+    background-image: linear-gradient(to bottom right, #ad916c, rgba(32, 44, 156, 0.774), white);
+    font-family: 'Montserrat', sans-serif;
+    padding: 45px;
+    color: white;
+}

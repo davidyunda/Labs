@@ -3,46 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="registration.css" type="text/css">
 </head>
 
 <body>
     <h1>Create Registration Form</h1>
 
-    <br> Registrant's name: <input type="text" maxlength="70" required>
-    <br> Password: <input type="password" required>
-    <br> Enter your email: <input type="email">
-    
-    <br> T-shirt size choose one: 
-    <select>
-        <option>Small</option>
-        <option>Medium</option>
-        <option>Large</option>
-    </select>
+    <form class="ml-5 mr-5">
 
-    <br> What's your birth date? <input type="date">
+        <label for="name">Registrant's Name:</label>
+        <input id="name" name="name" type="text" maxlength="70" required> <br>
+       
+        <label for="password">Password:</label>
+        <input id="password" name="password" type="password" required> <br>
 
+        <label for="email">Enter your email:</label>
+        <input id="email" name="email" type="email" required> <br>
 
-    <p> Do you want to recieve emails about our conference sponsors?
-    </p>
+        <label for="size">T-shirt size</label>
+        <select id="size" name="size" required>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+        </select> <br>
 
-    <div class="receive-email">
-        <input id="emails" name="user-choice" class= "receive-email-input"type= "radio" checked="true">
-        <label for="emails" class="receive-email-label">Yes</label>
-    </div>
-    <div class="form-check">
-        <input id= "no-emails" name="user-choice" class="receive-email-input" type= "radio"> 
-        <label for="no-emails" class="receive-email-label">No</label>
-    </div>
+        <label for="date">What's your birth date?</label>
+        <input id="date" name="date" type="date" required> <br>
 
-   <br> Please choose if attending morning and/or afternoon sessions 
-    <br> morning <input type="checkbox">
-    <br> afternoon <input type="checkbox">
+        <label>Do you want to receive emails about our sponsors?</label>
+        <label for="emails">Yes</label>
+        <input id="emails" name="user-choice" type= "radio" checked required>
 
-    <br> Special requests:
-    <br> <textarea name="" id="" cols="70" rows="7"></textarea>
+        <label for="no-emails">No</label>
+        <input id= "no-emails" name="user-choice"  type= "radio"> <br>
 
-    <br> <input type="submit">
+        <label>Are you attending morning and/or afternnon sessions:</label>
+        <label for="morningsession">Morning</label>
+        <input id="morningsessions" name="attendingsessions" type="checkbox">
 
+        <label for="afternoonsession">Afternoon</label>
+        <input id="afternoonsession" name="attendingsessions" type="checkbox"> <br>
+
+        <label for="comments">Special requests:</label> <br>
+        <textarea id="comments" name="comments" cols="70" rows="7"></textarea>
+
+        <br>
+        <input type="submit">
+    </form>
 
 </body>
 
