@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Document</title>
+</head>
+<body>
+    <p>What is the capital of Wisconsin?</p>
+
+    <button class="wrong-answer">Bayfield</button>
+    <button id="correct-answer">Madison</button>
+    <button class="wrong-answer">Midwaukee</button>
+
+    <p id="result"></p>
+
+    <script>
+    let correctAnswerButton = document.querySelector('#correct-answer')
+    
+    let defaultButtonColor = correctAnswerButton.style.background
+
+    let wrongAnswerButtons = document.querySelectorAll('.wrong-answer')
+    
+
+    let result = document.querySelector('#result')
+
+    // add an event listener to both wrong answer buttons.
+    wrongAnswerButtons.forEach(function(wrongAnswerButton){     //loop - repeats for each element in the wronganswerbuttons nodelist.
+        wrongAnswerButton.addEventListener('click', function(){
+            result.innerHTML = 'Wrong answer, try again?'
+            correctAnswerButton.style.background = defaultButtonColor
+         })
+    })
+
+    // // imperative-style loop, for loop
+    // for (let x=0 ; x<wrongAnswerButtons; x++) {
+    //     let wrongAnswerButton = wrongAnswerButtons[x]
+
+    //     wrongAnswerButton.addEventListener('click', function(){
+    //         result.innerHTML = 'Wrong answer, try again?'
+    //         correctAnswerButton.style.background = defaultButtonColor
+    //      })
+    // }
+    
+
+    // add an event listener to one correct answer button
+    correctAnswerButton.addEventListener('click', function() {
+        result.innerHTML = 'Correct Answer!'
+        correctAnswerButton.style.backgroundColor = 'cyan'
+    })
+
+
+    </script>
+</body>
+</html>

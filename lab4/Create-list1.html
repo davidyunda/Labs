@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>create-list</title>
+</head>
+<body>
+    <h1>Create List:</h1>
+
+    <input id="text"></input>
+    <button id="addText">Add</button>
+    <button id="clear">Clear</button>
+    <ul id="list"></ul>    
+
+<script>
+    let textInput = document.querySelector('#text')
+    let addButton = document.querySelector('#addText')
+    let clearButton = document.querySelector('#clear')
+    let textList = document.querySelector('#list')
+
+    let numberList = 0 
+    let maxItems = 10
+
+    addButton.addEventListener('click', function() {
+        let newText = textInput.value
+
+        if (newText.length < 1 || newText.length > 50) {        //characters between 1 and 50
+            alert ('It can only accept characters between 1 and 50')
+        }
+
+
+        if (numberList > maxItems) {        // no more than 10 items
+            alert ('You can not add more than 10 items')
+            return
+        }
+
+        let newListItems = document.createElement('li')     //create and display ordered list
+        newListItems.innerHTML = newText
+        textList.appendChild(newListItems)
+        textInput.value = ''
+        numberList++
+    })
+
+    clearButton.addEventListener('click', function() {      //delete list
+            textList.innerHTML = ''
+            numberList = ''
+    })
+
+</script>
+    
+</body>
+</html>

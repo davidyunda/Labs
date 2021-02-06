@@ -1,0 +1,27 @@
+.tab-button {
+    background-color: lightcoral;
+    border: none;
+    padding: 10px;
+    margin: 1px;
+    outline: none
+}
+
+.tab-button:hover {
+    background-color: white;
+}
+
+.tab-button.active {
+    background-color: white;
+}
+
+#tabs {
+    background-color: rgb(143, 1, 1);
+    border: 2px solid black;
+}
+
+.tab-content {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
