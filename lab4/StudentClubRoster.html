@@ -83,14 +83,16 @@
         }
 
         let newListItem = document.createElement('li')
-        newListItem.innerHTML = studentNewTextName + ', id: ' + studentNewTextId + ', GPA ' + studentNewTextGpa
+        newListItem.innerHTML = studentNewTextName + ', id: ' + studentNewTextId + ', GPA: ' + studentNewTextGpa
         studentList.appendChild(newListItem)
         elementInList++
         
         newListItem.addEventListener('click', function() {
-            ele.className = 'selected'
+            studentList.addClass('selected')
         })
         
+        
+
         // element.document.getElementById('li');
         // element.classList.toggle('selected');
 
