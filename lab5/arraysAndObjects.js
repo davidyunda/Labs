@@ -230,18 +230,11 @@ lNumbers = nobel_prize_winners_2017.prizes
 // arrayLa = []
 
 let numberA = 0
-
 lNumbers.forEach(function (la) {
-<<<<<<< HEAD
   let s = la.laureates.length
   numberA = numberA + s
-  
- 
-=======
   let s = la.laureates
   console.log(s.length)
-  
->>>>>>> 3efd9d1dcc3c0a35d2acd0660a207a4ed0614487
 })
 console.log(numberA)
 //   have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.
