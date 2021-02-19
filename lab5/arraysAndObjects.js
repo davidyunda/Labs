@@ -228,22 +228,14 @@ console.log('Categories: ' + a.length)
 // TODO write code to count the total number of laureates from 2017. 
 lNumbers = nobel_prize_winners_2017.prizes
 // arrayLa = []
+
+let numberA = 0
+
 lNumbers.forEach(function (la) {
-  let s = la.laureates
-  // if (la in arrayLa) {
-  //   arrayLa[s]++
-  // } else {
-  //   arrayLa[s] = 1
-  // }
-  // return arrayLa
-  // z = s.length
-  // arrayLa.push(z)
-  // console.log(arrayLa)
-
-  // arrayLa.push(la.laureates)
+  let s = la.laureates.length
+  numberA = numberA + s
   
-  console.log(s.length)
-  // console.log(d.length)
+ 
 })
-
+console.log(numberA)
 //   have a good look at how the JSON is structured, and think about what loop(s) you'll need to write.
