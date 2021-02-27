@@ -56,7 +56,7 @@ function guessCapital(attempts) {
         let answerInput = userAnswerElement.value
         // console.log(answerInput)
 
-        let url = `https://api.worldbank.org/v2/country/${code}?format=json`
+        let url = `https://api.worldbank.org/v2/country/${code}?format=json1`
 
         fetch(url).then( (res) => {
             return res.json()
@@ -89,3 +89,5 @@ playButton.addEventListener('click', function(){
     
     
 })
+
+
