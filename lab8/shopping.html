@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <style>
+        td, tr {
+            width: 25%;
+            text-align: center;
+        }
+
+        .error-message {
+            color: red
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <h1>Shopping cart</h1>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ unitPrice }}</td>
+                <td>
+                    <input type="number" v-model="quantity">
+                        <div class="error-message" v-if="quantityError"> {{ quantityError }}</div>
+                </td>
+                <td>
+                    <!--Only display total if there is no error-->
+                    <div v-if="quantityError">
+                        Invalid quantity
+                    </div>
+                    <div v-else>
+                        {{ total }}
+                    </div>
+                </td>
+                
+
+            </tr>
+
+
+
+        </table>
+
+    </div>
+
+    <script>
+        let app = Vue.createApp({
+            data() {
+                return  {
+                    name: 'Hat',
+                    quantity: 1,
+                    unitPrice: 4.99,
+                    maxQuantity: 20,
+                    quantityError: ''
+                }
+            }, 
+            computed: {
+                total() {
+                    // set an error message if the new value of quantity is not valid
+                    // if ( !Number.isInteger(this.quantity)) {
+                    //     this.quantityError = 'Quantity must be a number'
+                    // }
+                    if(this.quantity < 0 || this.quantity > this.maxQuantity ) {
+                        this.quantityError = 'Quantity must be between 0 and 20'
+                    }
+
+                    // clear error if quantity is valid
+
+                    else {
+                        this.quantityError = ''
+
+                        // Compute price
+                        let totalPrice = this.quantity * this.unitPrice
+                        let formattedPrice = totalPrice.toFixed(2)
+                        return formattedPrice
+                    }
+                }
+            }
+            
+        })
+
+
+    app.mount('#app')  
+    </script>
+    
+</body>
+</html>
