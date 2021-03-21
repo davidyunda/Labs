@@ -12,11 +12,8 @@ h2 {
 }
 
 h3 {
-    /* color: turquoise; */
     font-family: Ubuntu, 'Times New Roman', Times, serif;
-    /* font-style: italic; */
     font-size: 35px;
-    /* text-decoration: underline; */
 }
 
 p {
@@ -24,78 +21,31 @@ p {
 }
 
 body {
-    /* display: flex; */
-    /* align-items: center; */
     background-color:white
 }
 
-#box1 {
-    width: 80%;
-    height: 145px;
-    
-    border-radius:30px;
-    background-color: white;
-
-}
 
 #price-button {
     position: relative;
-    margin-top: 60px;
+    margin-top: 200px;
+    width: 60%;
+    margin-left: 110px;
+    background-color: white;
+    text-align: center;
+    border-radius: 30px;
 }
-
-/* #box2 {
-    width: 80%;
-    height: 10px;
-
-    border-radius:30px;
-    background-color: rgb(133,187,101)
-} */
-
-/* #box3 {
-    align-items: right;
-} */
-
-    /* position: absolute; */
-    /* top: 500px;
-    left: 500px
-}
-
-/* * {
-    margin: 0;
-    padding: 0;
-} */
 
 #section-1 {
     width: 100%;
     height: 600px;
-    /* display: flex; */
-    /* align-items: center;  */
+    display: flex;
     background-color: rgba(0, 0, 0, 0.849);
-    align-self:flex-end;
-    position: relative;
 }
 
 *{
     margin-left: 0
 }
-#number {
-    display: flex;
-    align-items: center
-    
-} 
 
-#boxes {
-    width: 45%;
-    text-align: center;
-} 
-
-
-img {
-    top: 120px;
-    left: 570px;
-    border-radius: 10px;
-    position: absolute
-}
 
 #section-2 {
     width: 100%;
@@ -107,6 +57,22 @@ img {
 #title-price {
     color: white;
     text-align: left;
-    /* text-decoration: underline; */
     font-size: 35px
+}
+
+
+
+#box-1 {
+    height: 100%;
+    width: 45%;
+}
+
+#box-2 {
+    width: 55%;
+    height: 100%;
+}
+
+img {
+    margin-top: 130px;
+    border-radius: 10px;
 }

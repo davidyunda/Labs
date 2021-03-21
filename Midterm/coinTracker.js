@@ -12,7 +12,7 @@ fetch(url).then( (res) => {
     console.log(price)
     let symbol = issData.bpi.USD.symbol
     console.log(symbol)
-    priceElement.innerHTML = `${price}${symbol}`
+    priceElement.innerHTML = `${price.toFixed(2)}${symbol}`
 })
 
 /////////////////////////////////////////////////////
