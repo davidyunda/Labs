@@ -1,0 +1,16 @@
+#records {
+    max-height: 250px;
+    overflow: scroll;
+}
+
+.sketching {
+    background-color: lightblue;
+}
+
+.painting {
+    color: lightcoral
+}
+
+.drawing {
+    color: lightgreen
+}
